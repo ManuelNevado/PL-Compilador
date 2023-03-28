@@ -1,0 +1,45 @@
+package Constructores;
+
+public interface Procesamiento {
+	void procesa(Suma exp);
+	void procesa (Resta exp);
+	void procesa (Multiplicacion exp);
+	void procesa (Division exp);
+	void procesa (Id exp);
+	void procesa(Num exp);
+    void procesa(Dec dec);
+    void procesa(Decs_muchas decs);
+    void procesa(Decs_una decs);
+    void procesa(Prog_sin_decs prog);    
+    void procesa(Prog_con_decs prog);
+	void procesa(Decs_vacia decs_vacia);
+	void procesa(And and);
+	void procesa(Porc porc);
+	void procesa(Or or);
+	void procesa(Not not);
+	void procesa(Not2 not2);
+	void procesa(Real real);
+	void procesa(Bool bool);
+	void procesa(Array array);
+	void procesa(String string);
+	void procesa(Insts_vacia insts_vacia);
+	void procesa(_while _while);
+	void procesa(if_then_else if_then_else);
+	void procesa(if_then if_then);
+	void procesa(del_mem del_mem);
+	void procesa(res_mem res_mem);
+	void procesa(nl nl);
+	void procesa(write write);
+	void procesa(read read);
+	void procesa(asig asig);
+	void procesa(Insts_muchas insts_muchas);
+	void procesa(Insts_una insts_una);
+	void procesa(PReals_muchas pReals_muchas);
+	void procesa(PReals_una pReals_una);
+	void procesa(PReals_vacia pReals_vacia);
+	void procesa(Var var);
+	void procesa(Valor valor);
+	void procesa(PForms_muchas pForms_muchas);
+	void procesa(PForms_una pForms_una);
+	void procesa(PForms_vacia pForms_vacia);
+}
