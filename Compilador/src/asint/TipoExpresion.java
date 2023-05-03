@@ -6,4 +6,6 @@ public enum TipoExpresion {
 	SUMA,
 	RESTA,
 	PUNTERO,
+	NULL,
+	INT,
 }
