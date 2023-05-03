@@ -1,7 +1,0 @@
-
-/**
- * @author manuel
- *
- */
-module Compilador {
-}
