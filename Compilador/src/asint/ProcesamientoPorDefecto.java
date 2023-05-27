@@ -11,5 +11,6 @@ public class ProcesamientoPorDefecto implements Procesamiento {
    public void procesa(Decs_muchas decs) {}
    public void procesa(Decs_una decs) {}
    public void procesa(Prog_sin_decs prog) {}    
-   public void procesa(Prog_con_decs prog) {}    
+   public void procesa(Prog_con_decs prog) {}
+   public void procesa(SumaReal sumaReal) {}    
 }

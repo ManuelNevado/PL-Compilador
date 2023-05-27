@@ -11,5 +11,6 @@ public interface Procesamiento {
     void procesa(Decs_muchas decs);
     void procesa(Decs_una decs);
     void procesa(Prog_sin_decs prog);    
-    void procesa(Prog_con_decs prog);    
+    void procesa(Prog_con_decs prog);
+	void procesa(SumaReal sumaReal);    
 }

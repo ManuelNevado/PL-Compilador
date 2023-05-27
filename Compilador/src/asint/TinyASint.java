@@ -39,6 +39,9 @@ public class TinyASint {
     public Decs decs_muchas(Decs decs, Dec dec) {
         return new Decs_muchas(decs,dec);
     }
+	public Decs decs_vacia(Decs decs) {
+	    	return new Decs_muchas(null, null);
+	}
     public StringLocalizado str(String s, int fila, int col) {
         return new StringLocalizado(s,fila,col);
     }
