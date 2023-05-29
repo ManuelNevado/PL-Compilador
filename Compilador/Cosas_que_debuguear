@@ -11,10 +11,11 @@
 
 
 ############################
-	1 --> Vinvulacion
+	1 --> Vinculacion Declaraciones     	------HECHO-----
+	1b -> Vinculacion Instrucciones
 	2 --> Comprobacion
 	3 --> Asigna Espacio
-	4 --> Maquina P   		------HECHO----- 
+	4 --> Maquina P   						------HECHO----- 
 	5 --> Etiquetado
 	6 --> Gen Coidgo
 ###########################

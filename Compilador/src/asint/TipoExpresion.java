@@ -1,12 +1,37 @@
 package asint;
 
 public enum TipoExpresion {
-	ASIG,
-	DECLARACION,
+	//op aritmetica
 	SUMA,
 	SUMAREAL,
 	RESTA,
-	PUNTERO,
+	MUL,
+	DIV,
+	PORC,
+	
+	//op booleana
+	AND,
+	OR,
+	NOT,
+	NOT2,
+	EQUAL,
+	UNEQUAL,
+	LESS,
+	LESS_EQUAL,
+	GREATER,
+	GREATER_EQUAL,
+	
+	//acceso
+	INDEX,
+	ACC,
+	DREF,
+	
+	
+	//tipos
 	NULL,
-	INT,
+	NUM,
+	REAL,
+	BOOL,
+	ARRAY,
+	ID,
 }

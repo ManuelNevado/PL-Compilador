@@ -177,31 +177,31 @@ public class TinyASint {
 	
 	public Exp exp_num(StringLocalizado id) {
 		Exp exp_num = new ExpNum(id);
-		exp_num.setTipo(Tipo.INT);
+		exp_num.setTipo(TipoExpresion.NUM);
 		return exp_num;
 	}
 	
 	public Exp exp_real(StringLocalizado id) {
 		Exp exp_real = new ExpReal(id);
-		exp_real.setTipo(Tipo.REAL);
+		exp_real.setTipo(TipoExpresion.REAL);
 		return exp_real;
 	}
 	
 	public Exp exp_bool(StringLocalizado id) {
 		Exp exp_bool = new ExpBool(id);
-		exp_bool.setTipo(Tipo.BOOL);
+		exp_bool.setTipo(TipoExpresion.BOOL);
 		return exp_bool;
 	}
 	
 	public Exp exp_array(StringLocalizado id) {
 		Exp exp_array = new ExpArray(id);
-		exp_array.setTipo(Tipo.ARRAY);
+		exp_array.setTipo(TipoExpresion.ARRAY);
 		return exp_array;
 	}
 	
 	public Exp exp_id(StringLocalizado id) {
 		Exp exp_id = new ExpId(id);
-		exp_id.setTipo(Tipo.ID);
+		exp_id.setTipo(TipoExpresion.ID);
 		return exp_id;
 	}
 	

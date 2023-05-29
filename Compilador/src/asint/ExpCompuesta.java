@@ -21,11 +21,14 @@ public class ExpCompuesta extends Exp{
 	}
 	
 	public int prioridad() {
-		return 0;
+		return prioridad;
 	}
 	
 	public void procesa(Procesamiento procesamiento) {
 	}
+	
+	public Exp getE0() {return this.e0;}
+	public Exp getE1() {return this.e1;}
 	
 	
 }

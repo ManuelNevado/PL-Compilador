@@ -13,5 +13,7 @@ public class Instrucciones {
 		return this;
 	}
 	
+	public ArrayList<Instruccion> getElements(){return this.list;}
+	
 	
 }

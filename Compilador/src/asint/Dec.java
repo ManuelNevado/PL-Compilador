@@ -11,6 +11,7 @@ public class Dec  {
     private StringLocalizado referencia;
     private Tipo tipo_array;
     private Campos campos;
+    private Tipo tipo_puntero;
     public Dec(StringLocalizado id, StringLocalizado val, TipoDeclaracion t) {
         this.id = id;
         this.val = val;
@@ -48,5 +49,10 @@ public class Dec  {
     
     public Campos getCampos() {return this.campos;}
     public void setCampos(Campos campos) {this.campos = campos;}
+    
+    public Tipo getTipoPuntero() {return tipo_puntero;}
+    public void setTipoPuntero(Tipo t) {this.tipo_puntero = t;}
+    
+    
 
 }
