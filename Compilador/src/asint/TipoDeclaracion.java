@@ -1,9 +1,15 @@
 package asint;
 
 public enum TipoDeclaracion {
-	INT,
-	BOOL,
+	INT,//deprecated
+	REAL,//deprecated
 	NULL,
-	REAL,
+	DEC_VAR,
+	DEC_TYPE,
+	DEC_PROC,
+	DEC_CAMPO,
+	DEC_PFORM,
 	PROCEDIMIENTO,
+	
+	
 }

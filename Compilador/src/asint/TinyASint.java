@@ -38,8 +38,10 @@ public class TinyASint {
     public Dec_var dec_var(StringLocalizado id, StringLocalizado val, TipoDeclaracion tipo) {
     	return new Dec_var(id, val, tipo);
     }
-    public Dec_tipo dec_tipo(StringLocalizado id, StringLocalizado val, TipoDeclaracion tipo) {
-    	return new Dec_tipo(id,val,tipo);
+    public Dec dec_tipo(StringLocalizado id, StringLocalizado val, Tipo t) {
+    	Dec dec = new Dec(id,val,TipoDeclaracion.DEC_TYPE);
+    	dec.setTipoVinculacion(t);
+    	return dec;
     }
     public Dec_campo dec_campo(StringLocalizado id, StringLocalizado val, TipoDeclaracion tipo) {
     	return new Dec_campo(id, val, tipo);
@@ -74,11 +76,11 @@ public class TinyASint {
 	}
 	
 	public Parametro pf_valor(Tipo t, StringLocalizado valor) {
-		return new Parametro(valor,t);
+		return new Parametro(valor,t, TipoParametro.P_VAL);
 	}
 	
 	public Parametro pf_var(Tipo t, StringLocalizado id) {
-		return new Parametro(id, t);
+		return new Parametro(id, t, TipoParametro.P_VAR);
 	}
 	
 	public Instrucciones is_vacia() {

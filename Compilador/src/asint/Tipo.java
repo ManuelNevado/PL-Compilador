@@ -19,5 +19,7 @@ public enum Tipo {
 	DEL_MEM,
 	CALL,
 	COMP,
+	CAMPO,//?????????
+	PUNTERO,
 	ID,
 }

@@ -12,4 +12,8 @@ public class Parametros {
 		lista.add(p);
 		return this;
 	}
+	
+	public ArrayList<Parametro> getElements(){
+		return this.lista;
+	}
 }

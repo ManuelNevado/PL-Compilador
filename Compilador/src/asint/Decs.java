@@ -2,7 +2,7 @@ package asint;
 
 import java.util.ArrayList;
 
-public abstract class Decs {
+public class Decs {
 private ArrayList<Dec> lista;
 	
 	public Decs() {
@@ -14,5 +14,7 @@ private ArrayList<Dec> lista;
 		return this;
 	}
 	
-	public abstract void procesa(Procesamiento p);
+	public ArrayList<Dec> getElements(){return this.lista;}
+	
+	public void procesa(Procesamiento p) {}
 }
