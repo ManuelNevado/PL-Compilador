@@ -5,4 +5,5 @@ public enum TipoDeclaracion {
 	BOOL,
 	NULL,
 	REAL,
+	PROCEDIMIENTO,
 }
