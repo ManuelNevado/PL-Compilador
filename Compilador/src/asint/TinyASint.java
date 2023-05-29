@@ -47,10 +47,10 @@ public class TinyASint {
     	return new Dec_campo(id, val, tipo);
     }
     public Decs decs_muchas(Decs decs, Dec dec) {
-        return new Decs_muchas(decs,dec);
+        return decs.add(dec);
     }
 	public Decs decs_vacia(Decs decs) {
-	    	return new Decs_muchas(null, null);
+	    	return new Decs();
 	}
 	public Campos cs_uno(Campo c) {
 		return (new Campos()).add(c);

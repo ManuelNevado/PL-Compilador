@@ -12,6 +12,12 @@ public class Dec  {
     private Tipo tipo_array;
     private Campos campos;
     private Tipo tipo_puntero;
+    
+    private int dir;
+    private int nivel;
+    private int tam_datos;
+    
+    
     public Dec(StringLocalizado id, StringLocalizado val, TipoDeclaracion t) {
         this.id = id;
         this.val = val;
@@ -53,6 +59,18 @@ public class Dec  {
     public Tipo getTipoPuntero() {return tipo_puntero;}
     public void setTipoPuntero(Tipo t) {this.tipo_puntero = t;}
     
+    
+    public int getDir() {return this.dir;}
+    public void setDir(int dir) {this.dir=dir;}
+    
+    public int getNivel() {return this.nivel;}
+    public void setNivel(int nivel) {this.nivel = nivel;}
+	public int getTam_datos() {
+		return tam_datos;
+	}
+	public void setTam_datos(int tam_datos) {
+		this.tam_datos = tam_datos;
+	}
     
 
 }
