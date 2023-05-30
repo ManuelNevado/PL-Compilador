@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import asint.Tipo;
+import asint.TipoExpresion;
+
 
 
 
@@ -70,6 +73,9 @@ public class MaquinaP {
    private IApilaind IAPILAIND;
    private IDesapilaind IDESAPILAIND;
    private IDup IDUP;
+   private IComparacion ICOMPARACION;
+
+   public Instruccion comp() {return ICOMPARACION;}
    private Instruccion ISTOP;
    private Instruccion IIRIND;
    public Instruccion suma() {return ISUMA;}
@@ -77,6 +83,7 @@ public class MaquinaP {
    public Instruccion sumaReal() {return ISUMAREAL;}
    public Instruccion mulReal() {return IMULREAL;}
    public Instruccion and() {return IAND;}
+   public Instruccion comparacion(Tipo t, TipoExpresion tipoE) {return new IComparacion(this,t, tipoE);}
    public Instruccion apilaInt(int val) {return new IApilaInt(this, val);}
    public Instruccion apilaReal(double val) {return new IApilaReal(this, val);}
    public Instruccion apilaBool(boolean val) {return new IApilaBool(this, val);}
@@ -119,6 +126,8 @@ public class MaquinaP {
       IIRIND = new IIrind(this);
       IDUP = new IDup(this);
       ISTOP = new IStop(this);
+      ICOMPARACION = new IComparacion(this, Tipo.INT, TipoExpresion.GREATER);
+      
       gestorPilaActivaciones = new GestorPilaActivaciones(tamdatos,(tamdatos+tampila)-1,ndisplays); 
       gestorMemoriaDinamica = new GestorMemoriaDinamica(tamdatos+tampila,(tamdatos+tampila+tamheap)-1);
    }
@@ -167,9 +176,11 @@ public class MaquinaP {
        
        m.ponInstruccion(m.activa(1,1,8));
        m.ponInstruccion(m.dup());
-       m.ponInstruccion(m.apilaReal(1.5));
-       m.ponInstruccion(m.apilaReal(2.0));
-       m.ponInstruccion(m.sumaReal());
+       m.ponInstruccion(m.apilaInt(3));
+       m.ponInstruccion(m.apilaInt(2));
+       m.ponInstruccion(m.suma());
+       m.ponInstruccion(m.apilaInt(2));
+       m.ponInstruccion(m.comp());
        /*
        m.ponInstruccion(m.apilaReal(5.0));
        m.ponInstruccion(m.desapilaInd());

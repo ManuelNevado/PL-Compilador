@@ -84,13 +84,15 @@ public class GeneraCodigo {
 				gen_cod(i.getIs0());
 				instrucciones_maquinaP.add(new IIrA(this.maquina, i.getDir_sig()));
 				gen_cod(i.getIs1());
+				break;
 			case WHILE:
 				gen_cod(i.getE0());
 				instrucciones_maquinaP.add(new IIrF(this.maquina, i.getDir_sig()));
 				gen_cod(i.getIs0());
 				instrucciones_maquinaP.add(new IIrA(this.maquina, i.getDir_ini()));
+				break;
 			}
-			
+				
 		}
 	}
 	
@@ -260,8 +262,30 @@ public class GeneraCodigo {
 				valor1 = Double.parseDouble(ec.getE1().getValor().toString());
 				instrucciones_maquinaP.add(new IApilaReal(this.maquina, valor1));
 			}
+			break;
 			
+		case INDEX:
+			ec = (ExpCompuesta) e;
+			gen_cod(ec.getE0());
 			
+			valor = Integer.parseInt(ec.getE0().getValor().toString());
+			instrucciones_maquinaP.add(new IApilaInt(this.maquina, valor));
+			valor = Integer.parseInt(ec.getE1().getValor().toString());
+			instrucciones_maquinaP.add(new IApilaInt(this.maquina, valor));
+			break;
+			
+		case GREATER:
+			ec = (ExpCompuesta) e;
+			gen_cod(ec.getE0());
+			gen_cod(ec.getE1());
+			
+			Tipo t = ec.getTipoSol();
+			instrucciones_maquinaP.add(new IComparacion(this.maquina, t, TipoExpresion.EQUAL));
+		case GREATER_EQUAL:
+		case LESS:
+		case LESS_EQUAL:
+		case NOT:
+		case NOT2:
 		}
 		
 		
