@@ -3,19 +3,32 @@ package asint;
 public class ExpCompuesta extends Exp{
 	private Exp e0;
 	private Exp e1;
-	private TipoExpresion tipo;
 	private int prioridad;
 	
 	public ExpCompuesta(Exp e0, Exp e1, TipoExpresion t) {
 		this.e0 = e0;
 		this.e1 = e1;
-		this.tipo = t;
+		this.setTipo(t);
 		//Construir la prioridad aqui
 		switch (t){
-			case SUMA:
+			case EQUAL, UNEQUAL, GREATER, GREATER_EQUAL, LESS, LESS_EQUAL:
 				this.prioridad = 0;
-			case RESTA:
-				//TODO
+			break;
+			case SUMA,RESTA:
+				this.prioridad = 1;
+			break;
+			case AND,OR :
+				this.prioridad = 2;
+			break;
+			case MUL, DIV, PORC:
+				this.prioridad = 3;
+			break;
+			case NOT, NOT2:
+				this.prioridad = 4;
+			break;
+			case INDEX, ACC, DREF:
+				this.prioridad = 4;
+			break;
 		}
 				
 	}

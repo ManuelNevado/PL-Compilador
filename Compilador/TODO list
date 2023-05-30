@@ -4,7 +4,12 @@
 	**Revisar Constructores AST***
 	**Revisar comrpueba_tipo en Expresiones BOOL (IF_THEN, WHILE,...)**
 
-
+~~~~~~~~~~~~~~ DESPUES ~~~~~~~~~~~~~~~~~~~~~~~
+		
+		**gen_cod para call**
+		**gen_cod para PREAL**
+		**Revisar la declaracion de campos (en general)**
+		**Revisar la declaracion de DEC_PFORM y DEC_PREAL**
 
 
 #################################################################################################################
@@ -14,15 +19,9 @@
 	3 --> Asigna Espacio					------HECHO-----DEBUGUEADO-------									#
 	4 --> Maquina P   						------HECHO-----DEBUGUEADO-------									#
 	5 --> Etiquetado						------HECHO-----DEBUGUEADO-------									#
-	6 --> Gen Coidgo						------HECHO-----													#
+	6 --> Gen Coidgo						------HECHO-----DEBUGUEADO-------									#
 #################################################################################################################
 		
 
 
 
-~~~~~~~~~~~~~~ DESPUES ~~~~~~~~~~~~~~~~~~~~~~~
-		
-		**gen_cod para call**
-		**gen_cod para PREAL**
-		**Revisar la declaracion de campos (en general)**
-		**Revisar la declaracion de DEC_PFORM y DEC_PREAL**

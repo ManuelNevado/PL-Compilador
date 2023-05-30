@@ -7,6 +7,7 @@ public abstract class Exp  {
 	private StringLocalizado valor;
 	private Tipo tipoSol;
 	private int etiqueta;
+	private Tipo tipoArray;
 	
 	public Exp() {}
 	
@@ -29,4 +30,13 @@ public abstract class Exp  {
 	public void setEtiqueta(int etiqueta) {
 		this.etiqueta = etiqueta;
 	}
+
+	public Tipo getTipoArray() {
+		return tipoArray;
+	}
+
+	public void setTipoArray(Tipo tipoArray) {
+		this.tipoArray = tipoArray;
+	}
+
 }

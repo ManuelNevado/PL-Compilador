@@ -10,6 +10,7 @@ public class Parametro {
 	private TipoParametro t_parametro;
 	private Campos campo;
 	private Decs decs;
+	private Exp e0;
 	
 	private int dir;
 	private int nivel;
@@ -91,6 +92,14 @@ public class Parametro {
 
 	public void setDecs(Decs decs) {
 		this.decs = decs;
+	}
+
+	public Exp getE0() {
+		return e0;
+	}
+
+	public void setE0(Exp e0) {
+		this.e0 = e0;
 	}
 	
 	

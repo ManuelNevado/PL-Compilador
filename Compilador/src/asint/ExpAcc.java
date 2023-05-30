@@ -4,6 +4,7 @@ public class ExpAcc extends Exp{
 	
 	private Exp e0;
 	private StringLocalizado name;
+	private Campo campo;
 
 
 	public ExpAcc() {
@@ -19,5 +20,14 @@ public class ExpAcc extends Exp{
 	
 	public StringLocalizado getName() {return name;}
 	public void setName(StringLocalizado name) {this.name = name;}
+
+	public Campo getCampo() {
+		return campo;
+	}
+
+	public void setCampo(Campo campo) {
+		this.campo = campo;
+	}
+
 
 }

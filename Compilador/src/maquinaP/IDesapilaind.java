@@ -4,15 +4,15 @@ import maquinaP.MaquinaP.EAccesoFueraDeRango;
 import maquinaP.MaquinaP.Instruccion;
 import maquinaP.MaquinaP.Valor;
 
-class IDesapilaind implements MaquinaP.Instruccion {
+public class IDesapilaind implements MaquinaP.Instruccion {
       /**
 	 * 
 	 */
-	private final MaquinaP maquinaP;
+	private  final MaquinaP maquinaP;
 	/**
 	 * @param maquinaP
 	 */
-	IDesapilaind(MaquinaP maquinaP) {
+	public IDesapilaind(MaquinaP maquinaP) {
 		this.maquinaP = maquinaP;
 	}
 	public void ejecuta() {

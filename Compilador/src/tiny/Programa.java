@@ -6,9 +6,9 @@ public class Programa {
 	private Decs decs;
 	private Instrucciones is;
 	
-	public Programa() {
-		this.decs = new Decs();
-		this.is = new Instrucciones();
+	public Programa(Decs decs, Instrucciones is) {
+		this.decs = decs;
+		this.is = is;
 		
 	}
 	

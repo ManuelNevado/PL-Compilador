@@ -3,7 +3,7 @@ package maquinaP;
 import maquinaP.MaquinaP.Instruccion;
 import maquinaP.MaquinaP.ValorInt;
 
-class IActiva implements MaquinaP.Instruccion {
+public class IActiva implements MaquinaP.Instruccion {
        /**
 	 * 
 	 */

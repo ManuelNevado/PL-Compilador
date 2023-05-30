@@ -35,8 +35,8 @@ public class TinyASint {
     public Decs decs_una(Dec dec) {
         return new Decs_una(dec);
     }
-    public Dec_var dec_var(StringLocalizado id, StringLocalizado val, TipoDeclaracion tipo) {
-    	return new Dec_var(id, val, tipo);
+    public Dec dec_var(StringLocalizado id, StringLocalizado val, TipoDeclaracion tipo) {
+    	return new Dec(id, val, tipo);
     }
     public Dec dec_tipo(StringLocalizado id, StringLocalizado val, Tipo t) {
     	Dec dec = new Dec(id,val,TipoDeclaracion.DEC_TYPE);
