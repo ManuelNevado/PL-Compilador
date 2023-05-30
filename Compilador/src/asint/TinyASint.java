@@ -87,71 +87,71 @@ public class TinyASint {
 		return new Instrucciones();
 	}
 	
-	public Instrucciones is_una(Instruccion i) {
+	public Instrucciones is_una(Instruccion_programa i) {
 		return (new Instrucciones()).add(i);
 	}
 	
-	public Instrucciones is_muchas(Instruccion i, Instrucciones is) {
+	public Instrucciones is_muchas(Instruccion_programa i, Instrucciones is) {
 		return is.add(i);
 	}
 	
-	public Instruccion asig(Exp e0, Exp e1) {
-		Instruccion asignacion = new Instruccion(Tipo.ASIG);
+	public Instruccion_programa asig(Exp e0, Exp e1) {
+		Instruccion_programa asignacion = new Instruccion_programa(Tipo.ASIG);
 		asignacion.setE0(e0);
 		asignacion.setE1(e1);
 		return asignacion;
 	}
 	
-	public Instruccion if_then(Exp e0, Instrucciones is) {
-		Instruccion if_then = new Instruccion(Tipo.IF_THEN);
+	public Instruccion_programa if_then(Exp e0, Instrucciones is) {
+		Instruccion_programa if_then = new Instruccion_programa(Tipo.IF_THEN);
 		if_then.setE0(e0);
 		if_then.setIs0(is);
 		return if_then;
 	}
 	
-	public Instruccion if_then_else(Exp e0, Instrucciones is0, Instrucciones is1) {
-		Instruccion if_then_else = new Instruccion(Tipo.IF_THEN_ELSE);
+	public Instruccion_programa if_then_else(Exp e0, Instrucciones is0, Instrucciones is1) {
+		Instruccion_programa if_then_else = new Instruccion_programa(Tipo.IF_THEN_ELSE);
 		if_then_else.setE0(e0);
 		if_then_else.setIs0(is0);
 		if_then_else.setIs1(is1);
 		return if_then_else;
 	}
 	
-	public Instruccion _while(Exp e0, Instrucciones is) {
-		Instruccion _while = new Instruccion(Tipo.WHILE);
+	public Instruccion_programa _while(Exp e0, Instrucciones is) {
+		Instruccion_programa _while = new Instruccion_programa(Tipo.WHILE);
 		_while.setE0(e0);
 		_while.setIs0(is);
 		return _while;
 	}
 	
-	public Instruccion read(Exp e0) {
-		Instruccion read = new Instruccion(Tipo.READ);
+	public Instruccion_programa read(Exp e0) {
+		Instruccion_programa read = new Instruccion_programa(Tipo.READ);
 		read.setE0(e0);
 		return read;
 	}
 	
-	public Instruccion write(Exp  e0) {
-		Instruccion write = new Instruccion(Tipo.WRITE);
+	public Instruccion_programa write(Exp  e0) {
+		Instruccion_programa write = new Instruccion_programa(Tipo.WRITE);
 		write.setE0(e0);
 		return write;
 	}
 	
-	public Instruccion nl() {return new Instruccion(Tipo.NL);}
+	public Instruccion_programa nl() {return new Instruccion_programa(Tipo.NL);}
 	
-	public Instruccion res_mem(Exp e0) {
-		Instruccion res_mem = new Instruccion(Tipo.RES_MEM);
+	public Instruccion_programa res_mem(Exp e0) {
+		Instruccion_programa res_mem = new Instruccion_programa(Tipo.RES_MEM);
 		res_mem.setE0(e0);
 		return res_mem;
 	}
 	
-	public Instruccion del_mem(Exp e0) {
-		Instruccion del_mem = new Instruccion(Tipo.DEL_MEM);
+	public Instruccion_programa del_mem(Exp e0) {
+		Instruccion_programa del_mem = new Instruccion_programa(Tipo.DEL_MEM);
 		del_mem.setE0(e0);
 		return del_mem;
 	}
 	
-	public Instruccion call(Exp e0, Parametros preal) {
-		Instruccion call = new Instruccion(Tipo.CALL);
+	public Instruccion_programa call(Exp e0, Parametros preal) {
+		Instruccion_programa call = new Instruccion_programa(Tipo.CALL);
 		call.setE0(e0);
 		call.setPreal(preal);
 		return call;
@@ -169,8 +169,8 @@ public class TinyASint {
 		return preals.add(preal);
 	}
 	
-	public Instruccion comp(Decs decs, Instrucciones is) {
-		Instruccion comp = new Instruccion(Tipo.COMP);
+	public Instruccion_programa comp(Decs decs, Instrucciones is) {
+		Instruccion_programa comp = new Instruccion_programa(Tipo.COMP);
 		comp.setDecs(decs);
 		return comp;
 	}

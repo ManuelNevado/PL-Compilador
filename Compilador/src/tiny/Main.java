@@ -2,10 +2,9 @@ package tiny;
 
 
 import java.io.FileInputStream;
+
 import java.io.InputStreamReader;
 import java.io.Reader;
-import procesamientos.Evaluacion;
-import procesamientos.Impresion;
 
 public class Main {
    public static void main(String[] args) throws Exception {

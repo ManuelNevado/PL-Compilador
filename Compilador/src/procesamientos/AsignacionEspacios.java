@@ -35,7 +35,7 @@ public class AsignacionEspacios {
 	}
 	
 	public void Asigna(Instrucciones Is) {
-		for(Instruccion i: Is.getElements()) {
+		for(Instruccion_programa i: Is.getElements()) {
 			switch(i.getTipo()) {
 			case IF_THEN:
 				Asigna(i.getIs0());

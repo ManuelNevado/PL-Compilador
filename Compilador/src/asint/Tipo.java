@@ -1,6 +1,7 @@
 package asint;
 
 public enum Tipo {
+	//Primitivos
 	INT,
 	REAL,
 	BOOL,
@@ -8,6 +9,8 @@ public enum Tipo {
 	ARRAY,
 	REGISTRO,
 	NULL,
+	
+	//Instrucciones
 	ASIG,
 	IF_THEN,
 	IF_THEN_ELSE,

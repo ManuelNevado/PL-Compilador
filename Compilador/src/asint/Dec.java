@@ -7,7 +7,9 @@ public class Dec  {
     private Tipo tipo_para_vinculacion;
     private Decs dec_proc;
     private Instrucciones is_proc;
+    private Instrucciones is_general;
     private Parametros pforms;
+    private Parametros preales;
     private StringLocalizado referencia;
     private Tipo tipo_array;
     private Campos campos;
@@ -17,6 +19,9 @@ public class Dec  {
     private int nivel;
     private int tam_datos;
     
+    private int dir_sig;
+    private int dir_ini;
+    
     
     public Dec(StringLocalizado id, StringLocalizado val, TipoDeclaracion t) {
         this.id = id;
@@ -24,6 +29,7 @@ public class Dec  {
         this.tipo=t;
         this.tipo_para_vinculacion = Tipo.NULL;
         this.tipo_array = Tipo.NULL;
+        this.is_general = new Instrucciones();
     }
     public StringLocalizado id() {return id;}
     public StringLocalizado val() {return val;}
@@ -36,8 +42,8 @@ public class Dec  {
     public Decs getDecs() {return this.dec_proc;}
     public void setDecs(Decs decs) {this.dec_proc = decs;}
     
-    public Instrucciones getIs() {return this.is_proc;}
-    public void setInstrucciones(Instrucciones is) {this.is_proc = is;}
+    public Instrucciones getIs() {return this.is_general;}
+    public void setInstrucciones(Instrucciones is) {this.is_general = is;}
     
 	public Parametros getPforms() {return pforms;}
 	public void setPforms(Parametros pforms) {this.pforms = pforms;}
@@ -70,6 +76,24 @@ public class Dec  {
 	}
 	public void setTam_datos(int tam_datos) {
 		this.tam_datos = tam_datos;
+	}
+	public Parametros getPreales() {
+		return preales;
+	}
+	public void setPreales(Parametros preales) {
+		this.preales = preales;
+	}
+	public int getDir_sig() {
+		return dir_sig;
+	}
+	public void setDir_sig(int dir_sig) {
+		this.dir_sig = dir_sig;
+	}
+	public int getDir_ini() {
+		return dir_ini;
+	}
+	public void setDir_ini(int dir_ini) {
+		this.dir_ini = dir_ini;
 	}
     
 

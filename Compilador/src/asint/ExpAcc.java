@@ -7,7 +7,7 @@ public class ExpAcc extends Exp{
 
 
 	public ExpAcc() {
-		this.e0 = null;
+		this.e0 = this;
 		this.name = null;
 	}
 

@@ -10,8 +10,10 @@ public class Vinculacion {
 	//Sin subprogramas
 	private HashMap<Object, Object> tabla;
 	private Programa programa;
+	private int nivel_numerico;
 	
 	public Vinculacion(Programa p) throws Exception {
+		this.nivel_numerico = 0;
 		this.programa =p;
 		this.tabla = new HashMap<Object,Object>();
 		vincula(p.getDecs(), p.getIs(), this.tabla);
@@ -21,7 +23,7 @@ public class Vinculacion {
 	public void vincula(Decs decs, Instrucciones is, HashMap<Object,Object> nivel) throws Exception {
 		vincula_decs1(decs, nivel);
 		vincula_decs2(decs, nivel);
-		vincula_instrucciones(is);
+		vincula_instrucciones(is, nivel);
 	}
 	
 	
@@ -47,13 +49,15 @@ public class Vinculacion {
 				vincula_decs1(dec.getPforms(), nivel);
 			case DEC_PROC:
 				//abre nivel
+				this.nivel_numerico++;
 				HashMap<Object, Object> nivel_nuevo = abreNivel(dec.id(), nivel);
 				vincula_decs1(dec.getPforms(), nivel_nuevo);
 				vincula_decs1(dec.getDecs(), nivel_nuevo);
 				vincula_decs2(dec.getPforms(), nivel_nuevo);
 				vincula_decs2(dec.getDecs(), nivel_nuevo);
-				vincula_instrucciones(dec.getIs());
+				vincula_instrucciones(dec.getIs(),nivel_nuevo);
 				//cierra nivel
+				this.nivel_numerico--;
 		}
 	}
 	
@@ -180,27 +184,28 @@ private void vincula_decs2(Tipo t, Dec dec, HashMap<Object,Object> nivel) throws
 	//------------------------------------------------- VINCULACION INSTRUCCIONES -------------------------------------------
 	
 	
-	private void vincula_instrucciones(Instrucciones is) throws Exception {
-		for(Instruccion i : is.getElements()) {
-			vincula_is(i);
+	private void vincula_instrucciones(Instrucciones is, HashMap<Object, Object> nivel) throws Exception {
+		for(Instruccion_programa i : is.getElements()) {
+			vincula_is(i, nivel);
 		}
 	}
 	
-	private void vincula_is(Instruccion i) throws Exception {
+	private void vincula_is(Instruccion_programa i, HashMap<Object, Object> nivel) throws Exception {
+		i.setNivel(nivel_numerico);
 		switch(i.getTipo()) {
 			case ASIG:
 				vincula_is(i.getE0());
 				vincula_is(i.getE1());
 			case IF_THEN:
 				vincula_is(i.getE0());
-				vincula_instrucciones(i.getIs0());
+				vincula_instrucciones(i.getIs0(),nivel);
 			case IF_THEN_ELSE:
 				vincula_is(i.getE0());
-				vincula_instrucciones(i.getIs0());
-				vincula_instrucciones(i.getIs1());
+				vincula_instrucciones(i.getIs0(),nivel);
+				vincula_instrucciones(i.getIs1(),nivel);
 			case WHILE:
 				vincula_is(i.getE0());
-				vincula_instrucciones(i.getIs0());
+				vincula_instrucciones(i.getIs0(),nivel);
 			case READ:
 				vincula_is(i.getE0());
 			case WRITE:
@@ -213,7 +218,13 @@ private void vincula_decs2(Tipo t, Dec dec, HashMap<Object,Object> nivel) throws
 				vincula_is(i.getE0());
 				vincula_is(i.getPreal());
 			case COMP:
-				//?????
+				//abre nivel
+				this.nivel_numerico++;
+				vincula_decs1(i.getDecs(),nivel);
+				vincula_decs2(i.getDecs(),nivel);
+				vincula_instrucciones(i.getIs0(),nivel);
+				this.nivel_numerico--;
+				
 		}
 	}
 	

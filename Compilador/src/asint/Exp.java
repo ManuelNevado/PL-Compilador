@@ -5,7 +5,11 @@ public abstract class Exp  {
 	private StringLocalizado id;
 	private TipoExpresion t;
 	private StringLocalizado valor;
-	public Exp() {}   
+	private Tipo tipoSol;
+	private int etiqueta;
+	
+	public Exp() {}
+	
 	public abstract int prioridad();
 	public abstract void procesa(Procesamiento procesamiento);
 	public TipoExpresion tipo() {return t;}
@@ -15,4 +19,14 @@ public abstract class Exp  {
 	public StringLocalizado ID() {return this.id;}
 	public StringLocalizado getValor() {return this.valor;}
 	public void setValor(StringLocalizado s) {this.valor = s;}
+	public Tipo getTipoSol() {return tipoSol;}
+	public void setTipoSol(Tipo tipoSol) {this.tipoSol = tipoSol;}
+
+	public int getEtiqueta() {
+		return etiqueta;
+	}
+
+	public void setEtiqueta(int etiqueta) {
+		this.etiqueta = etiqueta;
+	}
 }

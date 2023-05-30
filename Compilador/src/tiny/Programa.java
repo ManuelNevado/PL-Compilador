@@ -15,6 +15,6 @@ public class Programa {
 	public Decs getDecs() {return decs;}
 	public void add(Dec d) {this.decs.add(d);}
 	public Instrucciones getIs() {return this.is;}
-	public void add(Instruccion i) {this.is.add(i);}
+	public void add(Instruccion_programa i) {this.is.add(i);}
 	
 }

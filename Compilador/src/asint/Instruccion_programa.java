@@ -1,6 +1,6 @@
 package asint;
 
-public class Instruccion {
+public class Instruccion_programa {
 	private Tipo tipo;
 	private Exp e0;
 	private Exp e1;
@@ -8,10 +8,19 @@ public class Instruccion {
 	private Instrucciones is0;
 	private Instrucciones is1;
 	private Parametros preal;
+	private Parametros pforms;
 	private Decs decs;
 	
-	public Instruccion(Tipo tipo) {
+	private int dir_ini;
+	private int dir_sig;
+	private int dir_medio;
+	
+	private int nivel;
+	
+	public Instruccion_programa(Tipo tipo) {
 		this.tipo = tipo;
+		is0 = new Instrucciones();
+		is1 = new Instrucciones();
 	}
 	
 	public Tipo getTipo() {return this.tipo;}
@@ -31,5 +40,24 @@ public class Instruccion {
 	public Decs getDecs() {return decs;}
 	public void setTipo(Tipo tipo) {this.tipo = tipo;}
 	public ExpCompuesta getExp_compuesta() {return exp_compuesta;}
+
+	public int getDir_ini() {return dir_ini;}
+	public void setDir_ini(int dir_ini) {this.dir_ini = dir_ini;}
+	public int getDir_sig() {return dir_sig;}
+	public void setDir_sig(int dir_sig) {this.dir_sig = dir_sig;}
+
+	public int getNivel() {return nivel;}
+	public void setNivel(int nivel) {this.nivel = nivel;}
+
+	public Parametros getPforms() {return pforms;}
+	public void setPforms(Parametros pforms) {this.pforms = pforms;}
+
+	public int getDir_medio() {
+		return dir_medio;
+	}
+
+	public void setDir_medio(int dir_medio) {
+		this.dir_medio = dir_medio;
+	}
 
 }

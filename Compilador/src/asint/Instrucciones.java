@@ -2,18 +2,18 @@ package asint;
 import java.util.*;
 
 public class Instrucciones {
-	private ArrayList<Instruccion> list;
+	private ArrayList<Instruccion_programa> list;
 	
 	public Instrucciones() {
-		this.list = new ArrayList<Instruccion>();
+		this.list = new ArrayList<Instruccion_programa>();
 	}
 	
-	public Instrucciones add(Instruccion i) {
+	public Instrucciones add(Instruccion_programa i) {
 		this.list.add(i);
 		return this;
 	}
 	
-	public ArrayList<Instruccion> getElements(){return this.list;}
+	public ArrayList<Instruccion_programa> getElements(){return this.list;}
 	
 	
 }

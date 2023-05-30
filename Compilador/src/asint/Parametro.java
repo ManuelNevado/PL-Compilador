@@ -9,6 +9,7 @@ public class Parametro {
 	private Tipo tipo;
 	private TipoParametro t_parametro;
 	private Campos campo;
+	private Decs decs;
 	
 	private int dir;
 	private int nivel;
@@ -82,6 +83,14 @@ public class Parametro {
 
 	public void setTam_datos(int tam_datos) {
 		this.tam_datos = tam_datos;
+	}
+
+	public Decs getDecs() {
+		return decs;
+	}
+
+	public void setDecs(Decs decs) {
+		this.decs = decs;
 	}
 	
 	
